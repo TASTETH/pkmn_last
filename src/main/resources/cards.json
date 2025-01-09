@@ -1,0 +1,34 @@
+{
+  "id": null,
+  "cardNumber": "148",
+  "pokemonStage": "BASIC",
+  "name": "Bouffalant",
+  "hp": 130,
+  "evolvesFrom": null,
+  "skills": [
+    {
+      "name": "Lost Headbutt",
+      "description": "Put an Energy attached to your opponent’s Active Pokémon in the Lost Zone.",
+      "cost": "3",
+      "damage": 50
+    },
+    {
+      "name": "Superpowered Horns",
+      "description": "",
+      "cost": "4",
+      "damage": 120
+    }
+  ],
+  "weaknessType": "FIGHTING",
+  "resistanceType": null,
+  "retreatCost": "2",
+  "gameSet": "Lost Origin",
+  "pokemonType": "COLORLESS",
+  "regulationMark": "F",
+  "pokemonOwner": {
+    "firstName": "Руслан",
+    "surName": "Дзарасов",
+    "familyName": "Аланович",
+    "group": "БСБО-04-23"
+  }
+}
