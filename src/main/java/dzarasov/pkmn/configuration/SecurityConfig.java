@@ -31,7 +31,7 @@ public class SecurityConfig {
                                 "/api/v1/cards/**",
                                 "/api/v1/students/**",
                                 "/api/v1/cards/card/image")
-                        .hasAnyRole("ADMIN","USER")
+                        .permitAll()
                         .requestMatchers(
                                 HttpMethod.POST,
                                 "/api/v1/cards",
@@ -43,12 +43,9 @@ public class SecurityConfig {
         );
         http.formLogin(form -> form.successForwardUrl("/auth/success"));
         http.csrf(AbstractHttpConfigurer::disable);
-        http.sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.userDetailsService(jdbcUserDetailsManager);
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
-
-
 }
-
